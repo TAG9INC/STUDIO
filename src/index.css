@@ -75,10 +75,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .luxury-button:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.luxury-button:focus {
+  box-shadow: 0 0 0 4px rgb(97 114 243 / 0.3);
+}
+
+.luxury-button:active {
+  transform: scale(0.98);
 }
 
 .luxury-input {

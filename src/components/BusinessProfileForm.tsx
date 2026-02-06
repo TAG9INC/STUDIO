@@ -264,6 +264,7 @@ export default function BusinessProfileForm({ onComplete }: Props) {
                   type="button"
                   onClick={addChallenge}
                   className="px-6 py-4 bg-quantum-600 text-white rounded-xl hover:bg-quantum-700 transition-colors flex items-center gap-2"
+                  aria-label="Add challenge to your business profile"
                 >
                   <Plus className="w-4 h-4" />
                   Add
@@ -282,6 +283,7 @@ export default function BusinessProfileForm({ onComplete }: Props) {
                       type="button"
                       onClick={() => removeChallenge(index)}
                       className="text-red-600 hover:text-red-800"
+                      aria-label={`Remove challenge: ${challenge}`}
                     >
                       ×
                     </button>
@@ -312,6 +314,7 @@ export default function BusinessProfileForm({ onComplete }: Props) {
                   type="button"
                   onClick={addObjective}
                   className="px-6 py-4 bg-quantum-600 text-white rounded-xl hover:bg-quantum-700 transition-colors flex items-center gap-2"
+                  aria-label="Add objective to your business profile"
                 >
                   <Plus className="w-4 h-4" />
                   Add
@@ -330,6 +333,7 @@ export default function BusinessProfileForm({ onComplete }: Props) {
                       type="button"
                       onClick={() => removeObjective(index)}
                       className="text-green-600 hover:text-green-800"
+                      aria-label={`Remove objective: ${objective}`}
                     >
                       ×
                     </button>
@@ -349,6 +353,7 @@ export default function BusinessProfileForm({ onComplete }: Props) {
                 className="luxury-button flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label="Submit business profile and view your intelligence dashboard"
               >
                 View Your Intelligence Dashboard
                 <ArrowRight className="w-5 h-5" />

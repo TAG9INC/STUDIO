@@ -202,6 +202,7 @@ export default function PersonalProfileForm({ onComplete }: Props) {
                   type="button"
                   onClick={addGoal}
                   className="px-6 py-4 bg-quantum-600 text-white rounded-xl hover:bg-quantum-700 transition-colors"
+                  aria-label="Add goal to your personal profile"
                 >
                   Add
                 </button>
@@ -220,6 +221,7 @@ export default function PersonalProfileForm({ onComplete }: Props) {
                       type="button"
                       onClick={() => removeGoal(index)}
                       className="text-quantum-600 hover:text-quantum-800"
+                      aria-label={`Remove goal: ${goal}`}
                     >
                       ×
                     </button>
@@ -239,6 +241,7 @@ export default function PersonalProfileForm({ onComplete }: Props) {
                 className="luxury-button flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label="Submit personal profile and continue to business profile form"
               >
                 Continue to Business Profile
                 <ArrowRight className="w-5 h-5" />

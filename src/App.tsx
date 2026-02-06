@@ -91,10 +91,12 @@ function App() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <motion.button
+                    type="button"
                     onClick={() => setStep('personal')}
                     className="luxury-button flex items-center gap-3"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-label="Begin your journey to the personal profile form"
                   >
                     <Sparkles className="w-5 h-5" />
                     Begin Your Journey

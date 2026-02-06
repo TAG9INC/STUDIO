@@ -1,0 +1,13 @@
+{
+  "name": "Quantum Intelligence Studio",
+  "description": "A sophisticated web and mobile application that transforms personal and business data into actionable insights through elegant visualization and scenario-based optimization.",
+  "repository": "https://github.com/TAG9INC/STUDIO",
+  "logo": "https://raw.githubusercontent.com/TAG9INC/STUDIO/main/public/logo.png",
+  "success_url": "/",
+  "env": {
+  },
+  "build": {
+    "command": "npm run build",
+    "publish": "dist"
+  }
+}

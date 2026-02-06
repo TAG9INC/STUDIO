@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-quantum-50: #f0f4ff;
+  --color-quantum-100: #e0e9ff;
+  --color-quantum-200: #c7d7fe;
+  --color-quantum-300: #a5bbfd;
+  --color-quantum-400: #8196fa;
+  --color-quantum-500: #6172f3;
+  --color-quantum-600: #4f51e7;
+  --color-quantum-700: #4340cc;
+  --color-quantum-800: #3735a5;
+  --color-quantum-900: #313282;
+  
+  --color-luxury-cream: #F5F1E8;
+  --color-luxury-gold: #D4AF37;
+  --color-luxury-champagne: #F7E7CE;
+  --color-luxury-pearl: #EAE6D5;
+  --color-luxury-bronze: #CD7F32;
+  
+  --font-family-display: 'Playfair Display', Georgia, serif;
+  
+  --animate-fade-in: fadeIn 0.8s ease-in-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+body {
+  background-color: var(--color-luxury-cream);
+  color: rgb(17 24 39);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+}
+
+.luxury-card {
+  background-color: rgb(255 255 255 / 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border: 1px solid rgb(234 230 213 / 0.5);
+  padding: 2rem;
+}
+
+.luxury-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--color-quantum-600), var(--color-quantum-700));
+  color: white;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.luxury-button:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.luxury-button:focus {
+  box-shadow: 0 0 0 4px rgb(97 114 243 / 0.3);
+}
+
+.luxury-button:active {
+  transform: scale(0.98);
+}
+
+.luxury-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(4px);
+  border: 2px solid var(--color-luxury-pearl);
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.luxury-input:focus {
+  border-color: var(--color-quantum-500);
+  box-shadow: 0 0 0 4px rgb(97 114 243 / 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--color-quantum-600), var(--color-quantum-500), var(--color-luxury-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.luxury-glow {
+  box-shadow: 0 0 30px rgba(97, 114, 243, 0.3);
+}

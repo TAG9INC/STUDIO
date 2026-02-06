@@ -1,6 +1,13 @@
 # Quantum Intelligence Studio
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-SITE-ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE/deploys)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.2-blue)](https://react.dev/)
+
 A sophisticated web and mobile application that transforms personal and business data into actionable insights through elegant visualization and scenario-based optimization.
+
+🌐 **[Live Demo](https://your-site.netlify.app)** | 📚 **[Deployment Guide](./DEPLOYMENT.md)**
 
 ## ✨ Features
 
@@ -105,21 +112,87 @@ src/
 
 ## 🌐 Deployment
 
-### Netlify
+### Quick Deploy to Netlify
 
-This project is optimized for Netlify deployment:
+#### Option 1: One-Click Deploy
+
+Click the button below to deploy this application to Netlify:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TAG9INC/STUDIO)
+
+#### Option 2: Manual Deploy via Dashboard
+
+1. Fork or clone this repository
+2. Go to [Netlify](https://app.netlify.com)
+3. Click "Add new site" → "Import an existing project"
+4. Select your repository
+5. Configure:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+6. Click "Deploy site"
+
+#### Option 3: Quick Deploy Script
 
 ```bash
-# Build command
-npm run build
+# Run the deployment script
+./deploy.sh
+```
 
-# Publish directory
+#### Option 4: Netlify CLI
+
+```bash
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Login to Netlify
+netlify login
+
+# Deploy to production
+netlify deploy --prod
+```
+
+### Build Configuration
+
+**Build Command:**
+```bash
+npm run build
+```
+
+**Publish Directory:**
+```bash
 dist
 ```
 
-The site will automatically build and deploy when you push to your repository.
+**Build Output:**
+- Index: 0.78 kB (gzipped: 0.42 kB)
+- CSS: 21.71 kB (gzipped: 4.72 kB)
+- JS: 714.00 kB (gzipped: 218.24 kB)
 
-### Environment Setup
+### Netlify Configuration
+
+The repository includes `netlify.toml` with optimized settings:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+### Alternative Platforms
+
+- **Vercel:** Compatible with zero configuration
+- **GitHub Pages:** Use `gh-pages` package
+- **AWS S3:** Upload `dist/` contents
+- **Docker:** Dockerfile included in deployment guide
+
+📚 **[Complete Deployment Guide](./DEPLOYMENT.md)** - Detailed instructions for all platforms
+
+## 🔧 Environment Setup
 
 No environment variables required for basic functionality.
 

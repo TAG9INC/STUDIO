@@ -16,6 +16,6 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm install
-      - run: npm run check:cost-control
-      - run: npm run test:cost-control
+      - run: npm run cost-control:check
+      - run: npm run cost-control:test
       - run: npm run build

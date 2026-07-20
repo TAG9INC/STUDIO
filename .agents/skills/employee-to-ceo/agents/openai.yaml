@@ -1,0 +1,4 @@
+interface:
+  display_name: "Employee to CEO"
+  short_description: "Builds practical worker-to-owner transition plans"
+  default_prompt: "Assess this client's current position and create a grounded Employee-to-CEO roadmap with the appropriate industry module."

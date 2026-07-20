@@ -1,0 +1,4 @@
+interface:
+  display_name: "Consultant OS Local Fallback"
+  short_description: "Routes safe routine work to local AI and escalates when needed"
+  default_prompt: "Route this Consultant OS task through the local fallback policy, use local inference when appropriate, and escalate to verified cloud or source-grounded execution when required."

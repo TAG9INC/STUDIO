@@ -1,0 +1,4 @@
+interface:
+  display_name: "TAG 9 Agent Orchestrator"
+  short_description: "Coordinate parallel coding agents safely across TAG 9 repositories."
+  brand_color: "#111827"

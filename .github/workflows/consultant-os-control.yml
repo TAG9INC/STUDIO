@@ -1,0 +1,21 @@
+name: Consultant OS Control Layer
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [agent/consultant-os-foundation]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install
+      - run: npm run cost-control:check
+      - run: npm run cost-control:test
+      - run: npm run build

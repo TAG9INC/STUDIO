@@ -1,24 +1,22 @@
 {
-  "name": "studio",
-  "version": "1.0.0",
-  "description": "Quantum Intelligence Studio - Web and Mobile App",
+  "name": "tag9-consultant-os",
+  "version": "0.1.0",
+  "private": true,
   "type": "module",
+  "workspaces": ["packages/*"],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cost-control:build": "npm run build --workspace=consultant-os-cost-control",
+    "cost-control:check": "npm run check --workspace=consultant-os-cost-control",
+    "cost-control:test": "npm run test --workspace=consultant-os-cost-control"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TAG9INC/STUDIO.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TAG9INC/STUDIO/issues"
-  },
-  "homepage": "https://github.com/TAG9INC/STUDIO#readme",
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
     "@types/react": "^19.2.13",
